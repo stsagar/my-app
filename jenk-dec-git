@@ -1,0 +1,10 @@
+pipeline{
+    agent any
+    stages{
+        stage("git checkout"){
+            steps{
+                git credentialsId: 'githubp', url: 'https://github.com/stsagar/my-app.git'
+            }
+        }
+    }
+}
